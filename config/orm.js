@@ -2,3 +2,13 @@
 
 // Load the required Node modules
 var connection = require('./connection.js');
+
+// Section that creates selectAll function
+
+// Section that creates insertOne function
+
+// Section that creates updateOne function
+
+
+// Exports object as connection
+module.exports = orm;
