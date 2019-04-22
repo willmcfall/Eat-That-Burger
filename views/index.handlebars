@@ -1,7 +1,9 @@
-<div class="container text-center">
+<div class="container">
 
-  <h1>Eat the Burger!</h1>
-  <img src="./assets/img/burger.png" style="width:30%">
+  <h1 class="text-center">Eat the Burger!</h1>
+  <div class="text-center">
+    <img src="./assets/img/burger.png" style="width:30%">
+  </div>
 
   <div class="container">
 
@@ -26,7 +28,7 @@
         </h2>
         <ul>
           {{#each burger}}
-          {{#if sleepy}}
+          {{#if devoured}}
           {{> burgers/burger-block devoured=true}}
           {{/if}}
           {{/each}}
