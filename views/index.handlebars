@@ -13,8 +13,8 @@
         </h2>
         <ul>
           {{#each burger}}
-          {{#if sleepy}}
-          {{> cats/cat-block sleep=false}}
+          {{#if devoured}}
+          {{> burgers/burger-block devoured=false}}
           {{/if}}
           {{/each}}
         </ul>
@@ -27,7 +27,7 @@
         <ul>
           {{#each burger}}
           {{#if sleepy}}
-          {{> cats/cat-block sleep=false}}
+          {{> burgers/burger-block devoured=true}}
           {{/if}}
           {{/each}}
         </ul>
@@ -36,8 +36,6 @@
     </div>
 
   </div>
-
-
 
   <form class="create-form">
     <h2 class="text-left">
