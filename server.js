@@ -1,5 +1,6 @@
-var express = require("express");
+// This file sets up the server and loads express for use across the application. Also loads express-handlebars.
 
+var express = require("express");
 var PORT = process.env.PORT || 8080;
 var app = express();
 

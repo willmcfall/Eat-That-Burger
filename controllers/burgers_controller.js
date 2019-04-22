@@ -1,5 +1,6 @@
-var express = require("express");
+// This file sets up the rouding which outlines what happens at different url file paths.
 
+var express = require("express");
 var router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
