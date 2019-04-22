@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "root",
-  database: "burgers"
+  database: "burgers_db"
 });
 
 // Provides developer feedback on whether a connection to the database was established

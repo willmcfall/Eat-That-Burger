@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(180, 122, 13);
+    padding: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: bold; 
+}
+
+h2{
+    font-size: 26px;
+    font-weight: bold; 
+}
+
+h3{
+    font-size: 18px;
+}
+
+p{
+    font-size: 14px;
+}
