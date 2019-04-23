@@ -1,6 +1,7 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
 
+    // This section updates a burger
     $(".change-burger").on("click", function(event) {
       var id = $(this).data("id");
       var newBurger = $(this).data("newburger");
@@ -8,29 +9,25 @@ $(function() {
         devoured: newBurger
       };
   
-      // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newBurgerState
       }).then(
         function() {
           console.log("changed devoured to", newBurger);
-          // Reload the page to get the updated list
           location.reload();
         }
       );
     });
   
-    // This section posts a burger
-
+    // This section adds a burger
     $("#create-burger").on("click", function(event) {
-      // Make sure to preventDefault on a submit event.
       console.log("click successful");
       event.preventDefault();
   
       var newBurger = {
         burger_name: $("#ca").val().trim(),
-        devoured: "FALSE"
+        devoured: "0"
       };
   
       console.log(newBurger)
@@ -41,7 +38,6 @@ $(function() {
       }).then(
         function() {
           console.log("created new burger");
-          // Reload the page to get the updated list
           location.reload();
         }
       );
@@ -49,14 +45,14 @@ $(function() {
 
 
     // This section deletes a burger
-
     $(".delete-burger").on("click", function(event) {
       var id = $(this).data("id");
+      console.log(id);
       $.ajax("/api/burgers/" + id, {
         type: "DELETE"
       }).then(
         function() {
-          console.log("deleted cat", id);
+          console.log("deleted burger", id);
           location.reload();
         }
       );
