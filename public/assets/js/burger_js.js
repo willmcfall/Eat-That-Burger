@@ -21,12 +21,12 @@ $(function() {
     });
   
     // This section adds a burger
-    $("#create-burger").on("click", function(event) {
+    $("#submit").on("click", function(event) {
       console.log("click successful");
       event.preventDefault();
   
       var newBurger = {
-        burger_name: $("#ca").val().trim(),
+        burger_name: $("#create-burger").val().trim(),
         devoured: "0"
       };
   
