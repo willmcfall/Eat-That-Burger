@@ -1,6 +1,3 @@
-// Load the required Node modules
-var connection = require('./connection');
-
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
@@ -32,8 +29,6 @@ function objToSql(ob) {
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
       }
-      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-      // e.g. {sleepy: true} => ["sleepy=true"]
       arr.push(key + "=" + value);
     }
   }
@@ -106,12 +101,5 @@ var orm = {
   }
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (burger.js).
 module.exports = orm;
-
-
-// Section that creates selectAll function
-
-// Section that creates insertOne function
-
-// Section that creates updateOne function
